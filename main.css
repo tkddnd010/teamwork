@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gasoek+One&family=Gowun+Dodum&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #c6303e;
+}
+
+body {
+    background-color: #000;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 16%;
+    line-height: 100px;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+    position: relative;
+}
+
+.wrap a {
+    font-size: 45px;
+    font-family: 'Gasoek One', sans-serif;
+}
+
+header button {
+    position: absolute;
+    top: 31px;
+    right: 15%;
+}
+
+.main {
+    width: 100%;
+    height: 500px;
+}
+
+.box {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.box_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    height: 0;
+}
+
+.overlay_txt {
+    padding: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.overlay_txt p:first-child {
+    font-size: 30px;
+    color: #c6303e;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.box:hover .overlay {
+    height: 100%;
+    transition: .8s;
+}
+
+.applicationbox {
+    width: 500px;
+    margin: 20px auto 20px auto;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.form-floating>input {
+    background-color: transparent;
+    color: #fff;
+}
+
+.form-floating>label {
+    color: #fff;
+}
+
+.applicationbox button {
+    width: 100%;
+}
+
+.applicantcards {
+    width: 85%;
+    margin: 40px auto;
+}
