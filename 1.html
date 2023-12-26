@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+
+
+        .title {
+
+            font-family: 'Black Han Sans', sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: auto;
+            justify-content: center;
+
+
+            width: 100%;
+            margin: 5px 0 50px 0;
+            padding: 50px 30px 30px 30px;
+            background-image: url('https://t1.daumcdn.net/cfile/tistory/9969F3395B9500290E');
+            background-position: center;
+            background-size: cover;
+
+            font-size: 300%;
+            color: white;
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 1px 5px 5px 5px;
+        }
+
+        a {
+            text-decoration-line: none
+        }
+
+        .main-header {
+            width: 100%;
+            padding: 8px 16px;
+            display: inline-block;
+        }
+
+        .main-header>div {
+            /*padding-top: 10px;
+            width: 800px;
+            margin: 0px 750px auto auto;*/
+            display: inline-block;
+            width: 0%;
+            padding: 0;
+        }
+
+        .main-nav {
+            display: inline-block;
+            text-align: right;
+            list-style: none;
+            width: calc(100% - 100px);
+        }
+
+        .main-nav-items {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .main-nav__item {
+            display: inline-block;
+            padding: 2px;
+        }
+
+        .btn {
+            border: 1px solid deepskyblue;
+            border-radius: 5px;
+            width: 150px;
+            margin: 0px auto auto auto;
+            color: black;
+            background-color: deepskyblue;
+            box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .main-nav__item {
+            display: inline-block;
+        }
+
+        #main-container {
+            display: flex-end;
+            padding: 18px 80px 0 80px;
+        }
+
+        .main-cont-item {
+            text-align: right;
+            margin: 0 3px 0 5px;
+        }
+
+        #Team-img-item {
+            display: inline-block;
+            width: 25%;
+        }
+
+        #Team-li-item {
+            display: inline-block;
+            width: 45%;
+        }
+
+        #Team-container {
+            display: inline-block;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            margin: 30px 0px 0 60px;
+        }
+
+        .Team_items {
+            display: inline-block;
+        }
+
+        /* 기존 sawon 이름이 unknown word로 떠서 staff로 변경 */
+        .staff {
+            margin: 100px auto 15px auto;
+            width: 1000px;
+            height: 600px;
+        }
+
+        .col {
+            width: 200px;
+            margin: auto;
+        }
+
+        .image {
+            padding: 10px;
+            margin: center;
+
+        }
+
+        .myname {
+            width: 700px;
+            height: 300px;
+            margin: 50px auto 0px auto;
+            display: none;
+        }
+
+        .myname1 {
+            width: 700px;
+            height: 300px;
+            margin: 50px auto 0px auto;
+            display: none;
+        }
+
+        .myname2 {
+            width: 700px;
+            height: 300px;
+            margin: 50px auto 0px auto;
+            display: none;
+        }
+
+        .myname3 {
+            width: 700px;
+            height: 300px;
+            margin: 50px auto 0px auto;
+            display: none;
+        }
+
+        .myname4 {
+            width: 700px;
+            height: 300px;
+            margin: 50px auto 0px auto;
+            display: none;
+        }
+
+        .myname>button {
+            background-color: transparent;
+            border: none white;
+        }
+    </style>
+
+    <!--지원 함수-->
+    <script>
+        function applyFunction() {
+            let phone = prompt("지원자의 핸드폰 번호를 입력해주세요.");
+
+            if (phone !== null || phone == "") {
+                alert("F.I.L.O 팀에 지원해주셔서 감사합니다. 빠른 시일 내로 연락 드리겠습니다.");
+            } else {
+                alert("번호를 입력하지 않으셨네요. 다시 입력해 주세요.");
+            }
+
+            var applyFunction = document.getElementById("test").innerHTML = phone;
+        }
+    </script>
+
+
+    <!---팀소개 토글-->
+    <script>
+
+        $(function () {
+            $("#Team-Name").click(function () {
+                $("#Team-Name-Toggle").toggle();
+            });
+        });
+
+        $(function () {
+            $("#Team-Goals").click(function () {
+                $("#Team-Goals-Toggle").toggle();
+            });
+        });
+
+        $(function () {
+            $("#TeamPromise").click(function () {
+                $("#TeamPromise-Toggle").toggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#control').click(function () {
+                $("#page").toggle();
+            });
+        });
+        $(function () {
+            $('#control1').click(function () {
+                $('#page1').toggle();
+            });
+        });
+        $(function () {
+            $('#control2').click(function () {
+                $('#page2').toggle();
+            });
+        });
+        $(function () {
+            $('#control3').click(function () {
+                $('#page3').toggle();
+            });
+        });
+        $(function () {
+            $('#control4').click(function () {
+                $('#page4').toggle();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="main-header" id="main-container">
+        <nav class="main-nav main-cont-item">
+            <ul class="main-nav-items">
+                <li class="main-nav__item"><a href="#">홈으로</a></li>
+                <li class="main-nav__item"><a href="#"><input type="text" name="search" placeholder="search..."></a>
+                </li>
+                <li class="main-nav__item"><a href="#"> 로그인 </a></li>
+                <li class="main-nav__item"><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+        <div class="button main-cont-item" id="button">
+            <p><button class="btn" onclick="applyFunction()"><b>입사 지원</b></button></p>
+        </div>
+    </header>
+    <div class="title">
+        <h1 style="font-size: 200%;">F.I.L.O</h1>
+    </div>
+
+
+
+
+    <!-- sogae를 Team-intro 로 바꿈 -->
+    <div class="Team-intro" id="Team-container">
+        <div class="Team_items" id="Team-img-item">
+            <img src="1234.png" width="100%">
+        </div>
+        <div class="Team_items" id="Team-li-item">
+            <div>&nbsp;<img src="hh.png" width="10%"></div>
+            <div><button id="Team-Name" style="margin: 15px 0 15px 15px;">팀 이름</button>
+                <div id="Team-Name-Toggle" style="display:none; font-size: x-large; text-align: center">F.I.L.O</div>
+            </div>
+            <div><button id="Team-Goals" style="margin: 15px 0 15px 15px;">팀 목표</button>
+                <div id="Team-Goals-Toggle" style="display:none; font-size: x-large; text-align: center">첫 팀프로젝트 완성
+                </div>
+            </div>
+            <div><button id="TeamPromise" style="margin: 15px 0 15px 15px;">팀 약속</button></div>
+            <div id="TeamPromise-Toggle" style="display:none; font-size: x-large; text-align: center;">
+                <p>&nbsp;</p>
+                <p>1. 9 to 9 시간 잘 지키기</p>
+                <p>2. 아침 회의 성실히 참여하기.</p>
+                <p>3. 상호간의 질의응답 ( 다정하게 ) 대답 잘하기.</p>
+                <p>4. 10분 휴식 (50분 부터 10분 휴식하기)</p>
+                <p>5. 자기 작업 보여줄때 별거아니다,허접하다 등 슬픈 말 금지</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- //클릭시 나오는 소개 / 블로그 하이퍼링크 완료 -->
+    <div class="소개" id="소개">
+        <div class="myname" id="page">
+            <div class="card mb-3" style="max-width: 700px;" style="max-height: 300px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img id="image"
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" id="name">문상웅</h5>
+                            <p class="card-text" id="content">성격 및 소개</p>
+                            <p class="card-text" id="mbti">MBTI</p>
+                            <p class="card-text" id="good">장점</p>
+                            <p class="card-text" id="blog"><a href="https://velog.io/@tkddnd010">블로그</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myname1" id="page1">
+            <div class="card mb-3" style="max-width: 700px;" style="max-height: 300px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img id="image"
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" id="name">최인철</h5>
+                            <p class="card-text" id="content">성격 및 소개</p>
+                            <p class="card-text" id="mbti">MBTI</p>
+                            <p class="card-text" id="good">장점</p>
+                            <p class="card-text" id="blog"><a href="https://cic96.tistory.com/">블로그</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myname2" id="page2">
+            <div class="card mb-3" style="max-width: 700px;" style="max-height: 300px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img id="image"
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" id="name">김주희</h5>
+                            <p class="card-text" id="content">성격 및 소개</p>
+                            <p class="card-text" id="mbti">MBTI</p>
+                            <p class="card-text" id="good">장점</p>
+                            <p class="card-text" id="blog"><a
+                                    href="https://unravelacomplicatedproblemm.tistory.com/">블로그</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myname2" id="page3">
+            <div class="card mb-3" style="max-width: 700px;" style="max-height: 300px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img id="image"
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" id="name">박영서</h5>
+                            <p class="card-text" id="content">성격 및 소개</p>
+                            <p class="card-text" id="mbti">MBTI</p>
+                            <p class="card-text" id="good">장점</p>
+                            <p class="card-text" id="blog"><a href="https://honeydys-dam.tistory.com/">블로그</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="myname4" id="page4">
+            <div class="card mb-3" style="max-width: 700px;" style="max-height: 300px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img id="image"
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" id="name">유민식</h5>
+                            <p class="card-text" id="content">성격 및 소개</p>
+                            <p class="card-text" id="mbti">MBTI</p>
+                            <p class="card-text" id="good">장점</p>
+                            <p class="card-text" id="blog"><a href="https://u-kun96.tistory.com/">블로그</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 토글 사원증 -->
+    <!-- "sawon"이름이 계속 unknown word로 떠서 "staff"로 바꿨습니다. -->
+    <div class="staff">
+        <div id="card" class="row row-cols-1 row-cols-md-5 g-5">
+            <div class="col">
+                <div class="card" id="control">
+                    <button onclick="openSetting()"><img
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="card-img-top" alt="..."></button>
+                    <div class="card-body">
+                        <h5 style="text-align: center;" class="card-title">이름</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" id="control1">
+                    <button onclick="openSetting1()"><img
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="card-img-top" alt="..."></button>
+                    <div class="card-body">
+                        <h5 style="text-align: center;" class="card-title">이름</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" id="control2">
+                    <button onclick="openSetting2()"><img
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="card-img-top" alt="..."></button>
+                    <div class="card-body">
+                        <h5 style="text-align: center;" class="card-title">이름</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" id="control3">
+                    <button onclick="openSetting3()"><img
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="card-img-top" alt="..."></button>
+                    <div class="card-body">
+                        <h5 style="text-align: center;" class="card-title">이름</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" id="control4">
+                    <button onclick="openSetting4()"><img
+                            src="https://image.news1.kr/system/photos/2022/4/7/5306119/article.jpg/dims/optimize"
+                            class="card-img-top" alt="..."></button>
+                    <div class="card-body">
+                        <h5 style="text-align: center;" class="card-title">이름</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
